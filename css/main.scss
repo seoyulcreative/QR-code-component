@@ -1,0 +1,59 @@
+@use '_reset.scss';
+
+@mixin outline($color) {
+    outline: 1px solid $color;
+}
+@mixin fl-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$main-font : 'Outfit', sans-serif;
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(212, 45%, 89%);
+$Grayish-blue: hsl(220, 15%, 55%);
+$Dark-blue: hsl(218, 44%, 22%);
+
+
+body {
+    font-size: 15px;
+    font-family: $main-font;
+    background-color: $Light-gray;
+    @include fl-center();
+}
+
+main {
+    background-color: $White;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 350px;
+    height: 500px;
+    .qr-img {
+        height: 0;
+        padding-bottom: 90%;
+        background-image: url('../images/image-qr-code.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 1rem;
+        margin-bottom: .5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem;
+        color: $Dark-blue;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-size: 1rem;
+        color: $Grayish-blue;
+        padding: 1.5rem;
+        padding-top: 0;
+        text-align: center;
+    }
+}
+
+
+
